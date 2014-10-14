@@ -44,11 +44,12 @@
                                                                    action:@selector(killXcode:)
                                                             keyEquivalent:@""];
         killXcodeMenuItem.target = self;
-        [xcodeMenuItem.submenu insertItem:killXcodeMenuItem atIndex:2];
+        [xcodeMenuItem.submenu insertItem:killXcodeMenuItem
+                                  atIndex:(xcodeMenuItem.submenu.numberOfItems - 1)];
         
         // Separator
         [xcodeMenuItem.submenu insertItem:[NSMenuItem separatorItem]
-                                  atIndex:3];
+                                  atIndex:(xcodeMenuItem.submenu.numberOfItems - 1)];
     }
 }
 
