@@ -25,7 +25,9 @@
     self = [super init];
     
     if (self) {
-        [self setUpMenuItem];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self setUpMenuItem];
+        }];
     }
     
     return self;
